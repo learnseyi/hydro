@@ -1,9 +1,10 @@
+import Main from '../Main/Main';
 import './App.css';
 
-function App() {
+const App= ()=> {
   return (
     <div >
-    <h1>My Hydro App</h1>
+    <Main/>
     </div>
   );
 }
