@@ -1,0 +1,3 @@
+[submodule "xlsx_parser"]
+	path = xlsx_parser
+	url = git@github.com:learnseyi/xlsx_parser.git
