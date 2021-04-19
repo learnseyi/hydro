@@ -10,9 +10,8 @@ export const processFile= (file,heading)=>{
       const wb = xlsx.read(arrayBuffer,{type:'buffer'});
       const wsname = wb.SheetNames[0];
       const ws = wb.Sheets[wsname];
-      const data = xlsx.utils.sheet_to_json(ws,{ header:heading,blankrows: false,defval:null});
-      Promise.all(data).then(d => console.log(d))
-       
+      const data = xlsx.utils.sheet_to_json(ws,{ header: heading,blankrows: false,defval:null});
+      resolve(data)
     }
      
      fileReader.onerror = (error)=>{

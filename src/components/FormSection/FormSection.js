@@ -15,8 +15,8 @@ const FormSection = ({files,setFiles,paymentPeriod,setPaymentPeriod,handleSubmit
         'Employer_Account',
         paymentPeriod,
         'Total-1',
-        'Employee Account',
         processingPeriod,
+        'Employee Account',
         'Total'
         ]
     
@@ -37,7 +37,6 @@ const FormSection = ({files,setFiles,paymentPeriod,setPaymentPeriod,handleSubmit
     const handleChange = (e)=>{
         e.target.id === "current-schedule" ? setCurLabel(e.target.value) : setPrevLabel(e.target.value)
         setFiles([...files,e.target.files[0]])
-        console.log(e.target.files[0])
     }
 
    

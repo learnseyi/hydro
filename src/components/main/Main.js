@@ -8,13 +8,17 @@ const Main = ()=>{
     const [files,setFiles] = useState([]);
     const [paymentPeriod,setPaymentPeriod] = useState('');
     const [alert,setAlert] =useState(false)
+    const [resolvedPromise,setResolvedPromise] = useState([]);
     
 
         const handleSubmit =(files,heading)=>{
+            const tempHolding = []
             checkInput()
             files?.map((file,i)=>{
-               return  processFile(file,heading)
+                return tempHolding.push(processFile(file,heading))
+               
             })
+            Promise.allSettled(tempHolding).then(res => setResolvedPromise(res))  
         }
         const checkInput = ()=>{
             if(files?.length < 2 || paymentPeriod === ' '){
@@ -34,8 +38,7 @@ const Main = ()=>{
              handleSubmit={handleSubmit}
              />
              <ProcessedSchedule 
-             file={files}
-             paymentPeriod={paymentPeriod}
+             resolvedPromise={resolvedPromise}
              />
         </React.Fragment>
        
