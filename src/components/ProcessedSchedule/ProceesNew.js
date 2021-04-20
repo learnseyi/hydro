@@ -46,6 +46,7 @@ export const ProcessNew =(pre,cur)=>{
                 if(hasNumber(Object.keys(list))){
                     contributionList.push({'name':list.Name,'contribution':[list.Total,list['Total-1']]})
               }
+              return contributionList
         })
         resolve(contributionList)
     }

@@ -1,10 +1,9 @@
 import React,{useState,useEffect} from 'react';
-import {BrowserRouter as Router,Route,Switch,useHistory,useLocation} from 'react-router-dom';
 import MainNav from './MainNav';
 import FormSection from '../FormSection/FormSection'
 import ProcessedSchedule from '../ProcessedSchedule/ProcessedSchedule';
 import {processFile} from '../Functions/ProcessFile';
-import RedirectPage from './RedirectPage';
+// import RedirectPage from './RedirectPage';
 import Spinner from './Spinner';
 
 const Main = ()=>{
@@ -13,8 +12,8 @@ const Main = ()=>{
     const [alert,setAlert] =useState(false)
     const [resolvedPromise,setResolvedPromise] = useState([]);
     const [loading,setLoading] = useState(false)
-    let history = useHistory()
-    let location = useLocation()
+    // let history = useHistory()
+    // let location = useLocation()
     
     
 
@@ -23,7 +22,7 @@ const Main = ()=>{
             checkInput()
             if(!loading){
                 files?.map((file,i)=>{
-                     tempHolding.push(processFile(file,heading)) 
+                    return tempHolding.push(processFile(file,heading)) 
                 })
                
             Promise.allSettled(tempHolding).then(res => setResolvedPromise(res))  
@@ -48,10 +47,10 @@ const Main = ()=>{
     })
     return(
         <React.Fragment>
-            <Router>
+            
              <MainNav/>
-             <Switch>
-            <Route exact path='/'><FormSection 
+            
+            {loading ? <Spinner/> : <FormSection 
              alert={alert}
              setAlert={setAlert}
              files={files} 
@@ -60,17 +59,8 @@ const Main = ()=>{
              setPaymentPeriod={setPaymentPeriod}
              handleSubmit={handleSubmit}
            
-             />
+             />}
              <ProcessedSchedule resolvedPromise={resolvedPromise}/>
-             </Route>
-            <Route path='/upload'>
-             <ProcessedSchedule resolvedPromise={resolvedPromise}/>
-             </Route>
-             {/* <Route exact path='/upload' render={({props}) =>
-             <ProcessedSchedule resolvedPromise={{...props,resolvedPromise}}/>}
-             /> */}
-             </Switch>
-             </Router>
         </React.Fragment>
        
     )

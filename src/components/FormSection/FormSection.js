@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import {Alert,Button,Card,Container,Col,Form,InputGroup,Row} from 'react-bootstrap';
-import {BrowserRouter as Router,Link,link} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import './FormSection.css'
 
 const FormSection = ({files,setFiles,paymentPeriod,setPaymentPeriod,handleSubmit,alert,setAlert})=>{
@@ -114,10 +114,10 @@ const FormSection = ({files,setFiles,paymentPeriod,setPaymentPeriod,handleSubmit
                         </Form.Group>
                         <Router>
                         <div className="d-flex justify-content-center">
-                            <Link to='/upload'>
+                            
                         <Button 
                         onClick={()=>handleSubmit(files,heading)} 
-                        variant="primary">Process</Button></Link>
+                        variant="primary">Process</Button>
                         </div>
                         </Router>
                         </Form>
