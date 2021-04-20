@@ -1,4 +1,6 @@
+ HEAD
 import Main from '../Main/Main';
+import Main from '../main/Main';
 import './App.css';
 
 const App= ()=> {
