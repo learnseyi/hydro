@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import {Alert,Button,Card,Container,Col,Form,InputGroup,Row} from 'react-bootstrap';
+import {BrowserRouter as Router,Link,link} from 'react-router-dom';
 import './FormSection.css'
 
 const FormSection = ({files,setFiles,paymentPeriod,setPaymentPeriod,handleSubmit,alert,setAlert})=>{
@@ -57,7 +58,7 @@ const FormSection = ({files,setFiles,paymentPeriod,setPaymentPeriod,handleSubmit
             <Row>
                 <Col>
                     <div className='form'>
-                    {alert &&<Alert variant="danger">This is an alert</Alert>}
+                    {alert &&<Alert className='text-center'variant="danger">Please enter required information</Alert>}
                         <Form>
                             <Form.Text className="heading" as="h5">Please enter required fields</Form.Text>
                     <Form.Group>
@@ -111,11 +112,14 @@ const FormSection = ({files,setFiles,paymentPeriod,setPaymentPeriod,handleSubmit
                             </Col>
                         </Form.Row>
                         </Form.Group>
+                        <Router>
                         <div className="d-flex justify-content-center">
+                            <Link to='/upload'>
                         <Button 
                         onClick={()=>handleSubmit(files,heading)} 
-                        variant="primary">Process</Button>
+                        variant="primary">Process</Button></Link>
                         </div>
+                        </Router>
                         </Form>
                         </div>
                         </Col>

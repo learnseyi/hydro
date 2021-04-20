@@ -5,7 +5,9 @@ import {ProcessNew} from './ProceesNew'
 
 
 
+
 const ProcessedSchedule = ({resolvedPromise})=>{
+    console.log(resolvedPromise)
    const [pre,setPre] = useState([])
    const [cur,setCur] = useState([])
    const [update,setUpdate] = useState([])
@@ -44,10 +46,10 @@ useEffect(()=>{
     .then(info => setUpdate(info))
     .catch(error => console.log(error))
 },[cur,pre])
-   console.log(update)
+  
     return(
         <Container className="pt-5">
-        <Table striped bordered hover size="sm" >
+        {/* <Table striped bordered hover size="sm" >
             <thead>
                 <tr className="bg-primary text-white text-center">
                     {pre.value ? Object.keys(pre.value[0]).map((label,i)=>{
@@ -81,7 +83,7 @@ useEffect(()=>{
                                 </tr>
                     }): null}
             </tbody>
-        </Table>
+        </Table> */}
         <hr></hr>
         <Table striped bordered hover size="sm" >
             <thead>
