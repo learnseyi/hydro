@@ -4,6 +4,7 @@ import './App.css';
 
 const App= ()=> {
   return (
+    // importing browser router
     <Router>
        <div >
     <Main/>
