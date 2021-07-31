@@ -15,8 +15,8 @@ const FormSection = ({files,setFiles,paymentPeriod,setPaymentPeriod,handleSubmit
         'Employer_Account',
         paymentPeriod,
         'Total-1',
-        processingPeriod,
         'Employee Account',
+        processingPeriod,
         'Total'
         ]
     
