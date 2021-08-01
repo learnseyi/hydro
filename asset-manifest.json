@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/hydro/static/css/main.e1ae802d.chunk.css",
+    "main.js": "/hydro/static/js/main.dfdea3d5.chunk.js",
+    "main.js.map": "/hydro/static/js/main.dfdea3d5.chunk.js.map",
+    "runtime-main.js": "/hydro/static/js/runtime-main.88e7e24c.js",
+    "runtime-main.js.map": "/hydro/static/js/runtime-main.88e7e24c.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/hydro/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.04cfc61d.chunk.js": "/hydro/static/js/2.04cfc61d.chunk.js",
+    "static/js/2.04cfc61d.chunk.js.map": "/hydro/static/js/2.04cfc61d.chunk.js.map",
+    "static/js/3.f8529bd6.chunk.js": "/hydro/static/js/3.f8529bd6.chunk.js",
+    "static/js/3.f8529bd6.chunk.js.map": "/hydro/static/js/3.f8529bd6.chunk.js.map",
+    "index.html": "/hydro/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/hydro/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.e1ae802d.chunk.css.map": "/hydro/static/css/main.e1ae802d.chunk.css.map",
+    "static/js/2.04cfc61d.chunk.js.LICENSE.txt": "/hydro/static/js/2.04cfc61d.chunk.js.LICENSE.txt",
+    "static/media/hlogo.a40974bd.png": "/hydro/static/media/hlogo.a40974bd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.88e7e24c.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.04cfc61d.chunk.js",
+    "static/css/main.e1ae802d.chunk.css",
+    "static/js/main.dfdea3d5.chunk.js"
+  ]
+}
