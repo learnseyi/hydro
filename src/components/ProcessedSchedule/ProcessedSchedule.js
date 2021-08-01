@@ -6,7 +6,7 @@ import {Processed} from '../Functions/Processed';
 import './ProcessedSchedule.css'
 
 
-const ProcessedSchedule = ({resolvedPromise})=>{
+const ProcessedSchedule = ({resolvedPromise,style})=>{
    const [pre,setPre] = useState([])
    const [cur,setCur] = useState([])
    const [update,setUpdate] = useState([])
@@ -15,10 +15,8 @@ const ProcessedSchedule = ({resolvedPromise})=>{
 
    //calling the save function to write updated schedule to a new file
 const handleSave = ()=>{
-    const head = update.length ? Object.values(update[0]) : null
+    
   Processed(update.slice(0))
-console.log(head);
-
 }
 
    
@@ -40,11 +38,11 @@ const getInfo = (resolvedPromise)=>{
         .catch(error=>console.log(error));
     },[pre,cur])
 
-// pre.value ? Object.keys(pre.value[1]
+
     return(
-        <Container className="pt-5"fluid>
+        <Container className="p-5"fluid>
             <Card className="display-container">
-        <Table striped bordered hover size="sm" >
+      <Table striped bordered hover size="sm" >
             <thead>
                 <tr className="bg-primary text-white text-center">
                     {update?.length ? Object.values(update[1]).map((label,i)=>{
@@ -63,7 +61,7 @@ const getInfo = (resolvedPromise)=>{
             </tbody>
         </Table>
         </Card>
-        <div className="d-flex justify-content-center">
+        <div className={style}>
         <Button className="mr-3 px-5" onClick={handleSave} variant="primary" >Download</Button>
             <Button className="ml-3 px-5"onClick={()=>window.location.reload()} variant="primary">Reset</Button>
         </div>

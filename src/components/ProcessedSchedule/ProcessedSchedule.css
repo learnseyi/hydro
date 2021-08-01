@@ -17,10 +17,18 @@
   visibility: hidden;
   z-index: -1;
 }
-.display-container {
+/* .display-container {
   padding: 20px;
-}
+} */
 .table-body {
   height: 50vh;
   overflow: scroll;
+}
+.btn-container {
+  display: none;
+}
+.btn-container__show {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }

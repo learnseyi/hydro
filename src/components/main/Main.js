@@ -11,6 +11,8 @@ const Main = ()=>{
     const [alert,setAlert] =useState(false)
     const [resolvedPromise,setResolvedPromise] = useState([]);
     const [loading,setLoading] = useState(false)
+    const [style,setStyle] = useState('btn-container')
+
    
     
     
@@ -22,7 +24,7 @@ const Main = ()=>{
                 files?.map((file,i)=>{
                     return tempHolding.push(processFile(file,heading)) 
                 })
-               
+                setStyle('btn-container__show')
             Promise.allSettled(tempHolding).then(res => setResolvedPromise(res))  
         }
     }
@@ -58,7 +60,7 @@ const Main = ()=>{
              handleSubmit={handleSubmit}
            
              />}
-             <ProcessedSchedule resolvedPromise={resolvedPromise}/>
+             <ProcessedSchedule resolvedPromise={resolvedPromise} style={style}/>
         </React.Fragment>
        
     )
