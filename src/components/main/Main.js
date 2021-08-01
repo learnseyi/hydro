@@ -3,7 +3,6 @@ import MainNav from './MainNav';
 import FormSection from '../FormSection/FormSection'
 import ProcessedSchedule from '../ProcessedSchedule/ProcessedSchedule';
 import {processFile} from '../Functions/ProcessFile';
-// import RedirectPage from './RedirectPage';
 import Spinner from './Spinner';
 
 const Main = ()=>{
@@ -12,8 +11,7 @@ const Main = ()=>{
     const [alert,setAlert] =useState(false)
     const [resolvedPromise,setResolvedPromise] = useState([]);
     const [loading,setLoading] = useState(false)
-    // let history = useHistory()
-    // let location = useLocation()
+   
     
     
 
